@@ -1,5 +1,4 @@
-﻿
-
+﻿@model List<ToDoList>
 <div class="main-header">
 	<div class="logo-header">
 		<a href="index.html" class="logo">
@@ -50,17 +49,18 @@
 						<li>
 							<div class="notif-center">
 								
-								
+								@foreach(var item in Model)
+								{
 									<a href="#">
-										<div class="notif-icon notif-success"> <i class=""></i> </div>
+										<div class="notif-icon notif-success"> <i class="@item.ImageUrl"></i> </div>
 										<div class="notif-content">
 											<span class="block">
-												
+												@item.Title
 											</span>
-											<span class="time"></span>
+											<span class="time">@item.Date.ToShortDateString()</span>
 										</div>
 									</a>
-								
+								}
 								
 								
 								
