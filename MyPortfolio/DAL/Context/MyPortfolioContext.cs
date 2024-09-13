@@ -7,7 +7,7 @@ namespace MyPortfolio.DAL.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=Burak; initial Catalog=MyPortfolioDb; integrated Security=true;");
+            optionsBuilder.UseSqlServer("?");
         }
 
         public DbSet<About> Abouts { get; set; }
